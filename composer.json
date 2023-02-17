@@ -1,0 +1,48 @@
+{
+  "name": "richardmichel/laravel-sqs-fifo-queue",
+  "keywords": [
+    "richardmichel",
+    "laravel",
+    "sqs-fifo"
+  ],
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "MichelNogales",
+      "email": "michelnogales@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.5.0",
+    "aws/aws-sdk-php": "~3.0",
+    "illuminate/queue": ">=4.1",
+    "illuminate/support": ">=4.1",
+    "ramsey/uuid": ">=3.0"
+  },
+  "require-dev": {
+    "illuminate/encryption": ">=4.1",
+    "phpunit/phpunit": "~4.0",
+    "mockery/mockery": "~0.9",
+    "squizlabs/php_codesniffer": "2.*",
+    "shiftonelabs/codesniffer-standard": "0.*",
+    "vlucas/phpdotenv": "~2.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "MichiHelperSqs\\LaravelSqsFifoQueue\\": "src/"
+    }
+  },
+
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "stable",
+  "extra": {
+    "laravel": {
+      "providers": [
+        "MichiHelperSqs\\LaravelSqsFifoQueue\\LaravelSqsFifoQueueServiceProvider"
+      ]
+    }
+  }
+}
