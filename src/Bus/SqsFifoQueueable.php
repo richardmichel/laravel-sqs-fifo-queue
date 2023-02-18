@@ -55,4 +55,19 @@ trait SqsFifoQueueable
     {
         return $this->withDeduplicator('');
     }
+
+
+    /**
+     *  method get job datafor sqs aws.
+     *
+     * @param  string  $job
+     *
+     * @return $data
+     */
+    public function getJobData()
+    {
+        $payload = json_decode($this->job->getRawBody());
+        $command = unserialize($payload->data->command);
+        return  $command->job;
+    }
 }
