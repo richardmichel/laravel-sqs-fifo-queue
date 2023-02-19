@@ -397,3 +397,7 @@ The MIT License (MIT). Please see [License File](LICENSE.txt) for more informati
 [link-downloads]: https://packagist.org/packages/shiftonelabs/laravel-sqs-fifo-queue
 [link-author]: https://github.com/patrickcarlohickman
 [link-contributors]: ../../contributors
+
+
+git tag -a v1.0.1 -m "version 1.0.1"
+git push origin v1.0.1
