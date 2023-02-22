@@ -70,4 +70,12 @@ trait SqsFifoQueueable
         $command = unserialize($payload->data->command);
         return  $command->job;
     }
+
+    public function getArrayData()
+    {
+        $payload = json_decode($this->job->getRawBody());
+        $command = unserialize($payload->data->command);
+
+        return json_decode(json_decode(json_encode($command->job), true));
+    }
 }
